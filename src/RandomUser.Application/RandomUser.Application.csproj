@@ -9,4 +9,7 @@
     <Folder Include="Repository\" />
     <Folder Include="Queries\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RandomUser.Domain\RandomUser.Domain.csproj" />
+  </ItemGroup>
 </Project>
