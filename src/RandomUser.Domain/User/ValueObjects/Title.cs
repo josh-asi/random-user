@@ -1,8 +1,8 @@
 ﻿namespace RandomUser.Domain.User.ValueObjects
 {
-    public enum Title
+    public static class Title
     {
-        MR,
-        MS
+        public static string MR = "Mr";
+        public static string MS = "Ms";
     }
 }

@@ -5,26 +5,28 @@ namespace RandomUser.Domain.User
 {
     public sealed class Name
     {
-        public Title Title { get; private set; }
+        public string Title { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
 
         public string FullName { get; private set; }
 
-        public Name(Title title, string firstName, string lastName)
+        public Name(string title, string firstName, string lastName)
         {
             Title = title;
             FirstName = firstName;
             LastName = lastName;
-
-            string prefix = title == Title.MR ? "Mr" : "Ms";
-
-            FullName = $"{prefix}. {firstName} {LastName}";
+            FullName = $"{title}. {firstName} {LastName}";
         }
 
         public override string ToString()
         {
             return FullName;
+        }
+
+        public static implicit operator string(Name name)
+        {
+            return name.FullName;
         }
     }
 }

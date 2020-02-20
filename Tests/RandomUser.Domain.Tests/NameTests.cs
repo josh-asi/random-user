@@ -13,7 +13,7 @@ namespace RandomUser.Domain.Tests
 
             string expectedName = "Mr. John Doe";
 
-            Assert.Equal(expectedName, name.ToString());
+            Assert.Equal(expectedName, name);
         }
 
     }
