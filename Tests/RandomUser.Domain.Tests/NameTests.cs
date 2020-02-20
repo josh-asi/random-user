@@ -16,5 +16,15 @@ namespace RandomUser.Domain.Tests
             Assert.Equal(expectedName, name);
         }
 
+        [Fact]
+        public void Name_Should_Not_Be_Empty()
+        {
+            Assert.Throws<ShouldNotBeEmptyException>(() => new Name("", "John", "Doe"));
+            Assert.Throws<ShouldNotBeEmptyException>(() => new Name("", "John", ""));
+            Assert.Throws<ShouldNotBeEmptyException>(() => new Name("", "", "Doe"));
+            Assert.Throws<ShouldNotBeEmptyException>(() => new Name("", "", ""));
+
+        }
+
     }
 }

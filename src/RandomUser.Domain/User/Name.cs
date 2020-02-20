@@ -13,6 +13,9 @@ namespace RandomUser.Domain.User
 
         public Name(string title, string firstName, string lastName)
         {
+
+            ValidateInputs(title, firstName, lastName);
+
             Title = title;
             FirstName = firstName;
             LastName = lastName;
@@ -28,5 +31,12 @@ namespace RandomUser.Domain.User
         {
             return name.FullName;
         }
+
+        private void ValidateInputs(string title, string firstName, string lastName)
+        {
+            if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
+                throw new ShouldNotBeEmptyException("The title, first name, and last name must not be empty");
+        }
+
     }
 }

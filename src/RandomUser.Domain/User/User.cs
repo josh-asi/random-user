@@ -9,7 +9,7 @@ namespace RandomUser.Domain.User
         public Name Name {get; private set;}
         public DateTime DOB { get; private set; }
         public PhoneNumber PhoneNumber { get; private set; }
-        public Images Images { get; private set; }
+        public Image Image { get; private set; }
 
         public User()
         {
