@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using RandomUser.Infrastructure.DataSeeding;
 using RandomUser.Infrastructure.EntityFramework.Entities;
 
 namespace RandomUser.Infrastructure.EntityFramework
@@ -11,23 +13,20 @@ namespace RandomUser.Infrastructure.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Specify the path of the database here
-            optionsBuilder.UseSqlite("Filename=../users.db");
+            optionsBuilder.UseSqlite("Filename=../users.sqlite");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().HasData(
-                new User
-                {
-                    Id = 1,
-                    Email = "john.doe@email.com",
-                    DOB = DateTime.Now,
-                    Title = "Mr",
-                    FirstName = "John",
-                    LastName = "Doe",
-                    PhoneNumber = 1234567,
-                    Image = "https://randomuser.me/api/portraits/men/33.jpg"
-                }) ;
+            Console.WriteLine("Adding users..");
+
+            List<User> users = GenerateUsers.Generate();
+                                         
+            foreach (User user in users)
+            {
+               modelBuilder.Entity<User>().HasData(user);
+            }
+                        
         }
 
     }

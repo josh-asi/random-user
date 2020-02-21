@@ -21,7 +21,7 @@ namespace RandomUser.Infrastructure.EntityFramework.Queries
 
             Name name = new Name(user.Title, user.FirstName, user.LastName);
             DateTime dob = user.DOB;
-            PhoneNumber number = new PhoneNumber(1234567);
+            PhoneNumber number = new PhoneNumber(user.PhoneNumber);
             Image image = new Image(user.Image);
             Email email = new Email(user.Email);
 
