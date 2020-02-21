@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'RandomUsers.WebApi' ">
+    <StartAction>Project</StartAction>
+    <LaunchUrl>api/user</LaunchUrl>
+    <ApplicationURL>http://localhost:5002</ApplicationURL>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RandomUser.Infrastructure\RandomUser.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UseCases\" />
+    <Folder Include="UseCases\GetUser\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="SeedData.cs" />
+  </ItemGroup>
+</Project>

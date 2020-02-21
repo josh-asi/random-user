@@ -3,7 +3,7 @@ using RandomUser.Domain.User.ValueObjects;
 
 namespace RandomUser.Domain.User
 {
-    public sealed class RandomUser
+    public sealed class User
     {
         public Guid Id { get; private set; }
         public Name Name {get; private set;}
@@ -11,7 +11,7 @@ namespace RandomUser.Domain.User
         public PhoneNumber PhoneNumber { get; private set; }
         public Image Image { get; private set; }
 
-        public RandomUser(Name name, DateTime dob, PhoneNumber number, Image image)
+        public User(Name name, DateTime dob, PhoneNumber number, Image image)
         {
             Id = new Guid();
             Name = name;
@@ -20,11 +20,10 @@ namespace RandomUser.Domain.User
             Image = image;
         }
 
-        public RandomUser UpdateDetails()
-        {
-            //return new User();
-            return this;
-        }
+        //public User UpdateName(Name newName)
+        //{
+        //    return this;
+        //}
 
         public void DeleteUser()
         {
