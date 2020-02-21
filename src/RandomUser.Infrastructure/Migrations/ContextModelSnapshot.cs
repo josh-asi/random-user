@@ -51,12 +51,12 @@ namespace RandomUser.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            DOB = new DateTime(2020, 2, 21, 18, 28, 28, 121, DateTimeKind.Local).AddTicks(7490),
+                            DOB = new DateTime(2020, 2, 21, 23, 45, 33, 343, DateTimeKind.Local).AddTicks(4210),
                             Email = "john.doe@email.com",
                             FirstName = "John",
                             Image = "https://randomuser.me/api/portraits/men/33.jpg",
                             LastName = "Doe",
-                            PhoneNumber = 0,
+                            PhoneNumber = 1234567,
                             Title = "Mr"
                         });
                 });

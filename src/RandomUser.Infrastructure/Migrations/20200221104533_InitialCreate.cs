@@ -29,7 +29,7 @@ namespace RandomUser.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "DOB", "Email", "FirstName", "Image", "LastName", "PhoneNumber", "Title" },
-                values: new object[] { 1, new DateTime(2020, 2, 21, 18, 28, 28, 121, DateTimeKind.Local).AddTicks(7490), "john.doe@email.com", "John", "https://randomuser.me/api/portraits/men/33.jpg", "Doe", 0, "Mr" });
+                values: new object[] { 1, new DateTime(2020, 2, 21, 23, 45, 33, 343, DateTimeKind.Local).AddTicks(4210), "john.doe@email.com", "John", "https://randomuser.me/api/portraits/men/33.jpg", "Doe", 1234567, "Mr" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

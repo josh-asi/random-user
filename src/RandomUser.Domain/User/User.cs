@@ -11,8 +11,9 @@ namespace RandomUser.Domain.User
         public DateTime DOB { get; private set; }
         public PhoneNumber PhoneNumber { get; private set; }
         public Image Image { get; private set; }
+        public Email Email { get; private set; }
 
-        public User(int id , Name name, DateTime dob, PhoneNumber number, Image image)
+        public User(int id , Name name, DateTime dob, PhoneNumber number, Email email, Image image)
         {
 
             if (id < 0) throw new InvalidFormatException("User Id must not be a negative number");
@@ -21,9 +22,10 @@ namespace RandomUser.Domain.User
             Name = name;
             DOB = dob;
             PhoneNumber = number;
+            Email = email;
             Image = image;
         }
-
+               
         //public User UpdateName(Name newName)
         //{
         //    return this;

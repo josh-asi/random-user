@@ -24,9 +24,10 @@ namespace RandomUser.Application.Tests
             var name = new Name("Mr" ,"John", "Doe");
             var dob = DateTime.Now;
             var phone = new PhoneNumber(1234567);
+            var email = new Email("john.doe@email.com");
             var image = new Image("default-image");
 
-            var user = new User(id, name, dob, phone, image);
+            var user = new User(id, name, dob, phone, email, image);
 
             userQuery.GetUserAsync(user.Id).Returns(user);
 

@@ -12,7 +12,17 @@ namespace RandomUser.Domain.User
 
             DefaultLink = defaultLink;
             Thumbnail = $"{defaultLink}--small";
-        }        
+        }
+
+        //public override string ToString()
+        //{
+        //    return DefaultLink;
+        //}
+
+        //public static implicit operator string(Image image)
+        //{
+        //    return image.DefaultLink;
+        //}
 
     }
 }

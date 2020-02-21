@@ -16,8 +16,9 @@ namespace RandomUser.Domain.Tests
             var dob = DateTime.Now;
             var phoneNo = new PhoneNumber(1234567);
             var image = new Image("some-image");
+            var email = new Email("john.doe@email.com");
 
-            var user = new User.User(id, name, dob, phoneNo, image);
+            var user = new User.User(id, name, dob, phoneNo, email, image);
 
             Assert.NotNull(user);
            
@@ -31,8 +32,9 @@ namespace RandomUser.Domain.Tests
             var dob = DateTime.Now;
             var phoneNo = new PhoneNumber(1234567);
             var image = new Image("some-image");
+            var email = new Email("john.doe@email.com");
 
-            Assert.Throws<InvalidFormatException>(() => new User.User(id, name, dob, phoneNo, image));
+            Assert.Throws<InvalidFormatException>(() => new User.User(id, name, dob, phoneNo, email, image));
         }
     }
 }
