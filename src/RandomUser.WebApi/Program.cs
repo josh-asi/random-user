@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RandomUser.Infrastructure.EntityFramework;
 
 namespace RandomUsers.WebApi
 {
@@ -14,28 +16,29 @@ namespace RandomUsers.WebApi
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            //CreateHostBuilder(args).Build().Run();
 
-            //var host = CreateHostBuilder(args).Build();
+            var host = CreateHostBuilder(args).Build();
 
-            //using (var scope = host.Services.CreateScope())
-            //{
-            //    var services = scope.ServiceProvider;
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
 
-            //    try
-            //    {
-            //        var context = services.GetRequiredService<Context>();
-            //        context.Database.Migrate(); // apply all migrations
-            //        SeedData.Initialize(services); // Insert default data
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        var logger = services.GetRequiredService<ILogger<Program>>();
-            //        logger.LogError(ex, "An error occurred seeding the DB.");
-            //    }
-            //}
+                try
+                {
+                    var context = services.GetRequiredService<Context>();
+                    context.Database.Migrate(); // apply all migrations
+                    context.Database.EnsureDeleted();
+                    context.Database.EnsureCreated();
+                    
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
 
-            //host.Run();
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
