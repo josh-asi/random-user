@@ -15,7 +15,7 @@ namespace RandomUser.Infrastructure.EntityFramework.Queries
             this.context = context;
         }
 
-        public async Task<User> GetUserAsync(Guid userId)
+        public async Task<User> GetUserAsync(int userId)
         {
             Entities.User user = await context.Users.FindAsync(userId);
 
@@ -24,7 +24,7 @@ namespace RandomUser.Infrastructure.EntityFramework.Queries
             PhoneNumber number = new PhoneNumber(user.PhoneNumber);
             Image image = new Image(user.Image);
 
-            return new User(name, dob, number, image);
+            return new User(userId, name, dob, number, image);
         }
     }
 }

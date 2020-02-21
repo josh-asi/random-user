@@ -17,22 +17,23 @@ namespace RandomUser.Application.Tests
         }
 
 
-        // Not a useful test
         [Fact]
         public async void User_Should_Be_Grabbed_By_id()
         {
+            var id = 1;
             var name = new Name("Mr" ,"John", "Doe");
             var dob = DateTime.Now;
             var phone = new PhoneNumber(1234567);
             var image = new Image("default-image");
 
-            var user = new User(name, dob, phone, image);
+            var user = new User(id, name, dob, phone, image);
 
             userQuery.GetUserAsync(user.Id).Returns(user);
 
             var result = await userQuery.GetUserAsync(user.Id);
 
             Assert.NotNull(result);
+            Assert.Equal(id, user.Id);
         }
     }
 }

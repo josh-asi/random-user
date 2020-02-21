@@ -29,7 +29,7 @@ namespace RandomUsers.WebApi.UseCases.GetUser
         [HttpGet("{id}")]
         public async Task<User> GetUser(int id)
         {
-            return await userQuery.GetUserAsync(new Guid());
+            return await userQuery.GetUserAsync(id);
         }
 
 
