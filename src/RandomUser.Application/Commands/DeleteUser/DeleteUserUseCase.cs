@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using RandomUser.Application.Repository;
 
-
 namespace RandomUser.Application.Commands.DeleteUser
 {
     public class DeleteUserUseCase : IDeleteUserUseCase

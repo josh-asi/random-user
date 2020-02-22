@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using RandomUser.Application.Repository;
 using RandomUser.Domain.User;
 
