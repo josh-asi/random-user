@@ -25,11 +25,12 @@ namespace RandomUser.Domain.User
             Email = email;
             Image = image;
         }
-               
-        //public User UpdateName(Name newName)
-        //{
-        //    return this;
-        //}
+
+        public User UpdateName(Name newName)
+        {
+            Name = newName;
+            return this;
+        }
 
         public void DeleteUser()
         {

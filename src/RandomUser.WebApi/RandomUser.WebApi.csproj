@@ -16,8 +16,12 @@
     <Folder Include="Models\" />
     <Folder Include="UseCases\GetUsers\" />
     <Folder Include="UseCases\DeleteUser\" />
+    <Folder Include="UseCases\UpdateUser\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="SeedData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
   </ItemGroup>
 </Project>
