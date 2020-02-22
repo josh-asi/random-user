@@ -16,6 +16,7 @@
     <Folder Include="Models\" />
     <Folder Include="UseCases\GetUsers\" />
     <Folder Include="UseCases\DeleteUser\" />
+    <Folder Include="UseCases\UpdateUser\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="SeedData.cs" />
