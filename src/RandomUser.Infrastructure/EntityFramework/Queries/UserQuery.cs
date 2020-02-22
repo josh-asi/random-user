@@ -70,20 +70,17 @@ namespace RandomUser.Infrastructure.EntityFramework.Queries
         private List<User> mapUsers(List<Entities.User> dbUsers)
         {
             var users = new List<User>();
-
+                       
             foreach(Entities.User user in dbUsers)
             {
-                var name = new Name(user.Title, user.FirstName, user.LastName);
-
-                var newUser = new User(
+                users.Add(new User(
                     user.Id,
-                    name,
+                    new Name(user.Title, user.FirstName, user.LastName),
                     user.DOB,
                     new PhoneNumber(user.PhoneNumber),
                     new Email(user.Email),
-                    new Image(user.Image));
-
-                users.Add(newUser);
+                    new Image(user.Image))
+                    );
             }
             
             return users;
