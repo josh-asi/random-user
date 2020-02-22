@@ -3,7 +3,7 @@
     "RandomUser.WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/users/10",
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
