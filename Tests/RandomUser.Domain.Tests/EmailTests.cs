@@ -14,7 +14,7 @@ namespace RandomUser.Domain.Tests
             var email = "email.com";
 
             Assert.Throws<InvalidFormatException>(() => new Email(email));
-            
+
         }
 
         [Fact]

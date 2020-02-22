@@ -1,6 +1,6 @@
-﻿using System.Linq;
+﻿using RandomUser.Domain.User;
 using System.Collections.Generic;
-using RandomUser.Domain.User;
+using System.Linq;
 
 namespace RandomUser.WebApi.Models
 {

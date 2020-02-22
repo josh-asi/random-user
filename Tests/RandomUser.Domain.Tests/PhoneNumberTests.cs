@@ -25,7 +25,7 @@ namespace RandomUser.Domain.Tests
             int number = -21;
 
             Assert.Throws<InvalidFormatException>(() => new PhoneNumber(number));
-            
+
         }
     }
 }

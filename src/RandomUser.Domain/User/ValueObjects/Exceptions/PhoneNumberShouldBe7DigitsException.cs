@@ -1,5 +1,4 @@
-﻿using System;
-namespace RandomUser.Domain.User.ValueObjects.Exceptions
+﻿namespace RandomUser.Domain.User.ValueObjects.Exceptions
 {
     public class PhoneNumberShouldBe7DigitsException : DomainException
     {

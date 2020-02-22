@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RandomUser.Application;
 using RandomUser.Application.Queries;
 using RandomUser.WebApi.Models;
+using System;
+using System.Threading.Tasks;
 
 
 namespace RandomUser.WebApi.UseCases.GetUsers

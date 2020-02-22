@@ -37,7 +37,7 @@ namespace RandomUser.Infrastructure.DataSeeding
                     PhoneNumber = phoneNumber
                 });
             }
-                       
+
             return users;
 
         }
@@ -46,7 +46,6 @@ namespace RandomUser.Infrastructure.DataSeeding
         {
             return new Random().Next(0, LENGTH);
         }
-        
+
     }
 }
- 

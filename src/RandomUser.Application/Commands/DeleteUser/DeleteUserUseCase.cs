@@ -1,6 +1,5 @@
-﻿using System.Threading.Tasks;
-using RandomUser.Application.Repository;
-
+﻿using RandomUser.Application.Repository;
+using System.Threading.Tasks;
 
 namespace RandomUser.Application.Commands.DeleteUser
 {

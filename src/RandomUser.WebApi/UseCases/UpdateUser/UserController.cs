@@ -1,8 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RandomUser.Application.Commands.UpdateUser;
 using RandomUser.Domain.User;
+using System;
+using System.Threading.Tasks;
 
 namespace RandomUser.WebApi.UseCases.UpdateUser
 {

@@ -4,8 +4,8 @@ namespace RandomUser.Domain.Tests
 {
     public class ImageTests
     {
-       [Fact]
-       public void Image_Should_Have_A_Default_And_Thumbnail()
+        [Fact]
+        public void Image_Should_Have_A_Default_And_Thumbnail()
         {
 
             string defaultLink = "testing.jpg";
@@ -15,7 +15,7 @@ namespace RandomUser.Domain.Tests
 
             Assert.Equal(image.DefaultLink, defaultLink);
             Assert.Equal(image.Thumbnail, thumbnail);
-            
+
         }
 
         [Fact]

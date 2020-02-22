@@ -1,5 +1,4 @@
-﻿using System;
-namespace RandomUser.Domain.User
+﻿namespace RandomUser.Domain.User
 {
     public sealed class Image
     {
@@ -13,6 +12,6 @@ namespace RandomUser.Domain.User
             DefaultLink = defaultLink;
             Thumbnail = defaultLink.Replace(".jpg", "--small.jpg");
         }
-              
+
     }
 }
