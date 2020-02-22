@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RandomUser.Application;
 using RandomUser.Application.Queries;
 using RandomUser.WebApi.Models;
 
@@ -34,9 +33,14 @@ namespace RandomUsers.WebApi.UseCases.GetUser
                     PhoneNumber = result.PhoneNumber
                 };
                 return new ObjectResult(user);                   
-            } catch (Exception e)
+            }
+            catch (NotFoundException e)
             {
-                return NotFound($"Failed to get user {id}. {e.Message}");
+                return NotFound(e.Message);
+            }
+            catch (Exception e)
+            {
+                return BadRequest($"Error: {e.Message}");
             }
         }
 

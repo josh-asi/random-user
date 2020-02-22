@@ -25,7 +25,6 @@ namespace RandomUsers.WebApi
                 try
                 {
                     var context = services.GetRequiredService<Context>();
-                    context.Database.Migrate(); // apply all migrations
                     context.Database.EnsureDeleted();
                     context.Database.EnsureCreated();
                     

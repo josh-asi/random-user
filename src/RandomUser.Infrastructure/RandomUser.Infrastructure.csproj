@@ -9,6 +9,7 @@
     <Folder Include="EntityFramework\Queries\" />
     <Folder Include="EntityFramework\Entities\" />
     <Folder Include="DataSeeding\" />
+    <Folder Include="EntityFramework\Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="EntityFramework\Users.sqlite" />
