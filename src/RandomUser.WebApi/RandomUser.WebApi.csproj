@@ -5,11 +5,6 @@
   </PropertyGroup>
 
 
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'RandomUsers.WebApi' ">
-    <StartAction>Project</StartAction>
-    <LaunchUrl>api/user</LaunchUrl>
-    <ApplicationURL>http://localhost:5000</ApplicationURL>
-  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\RandomUser.Infrastructure\RandomUser.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
