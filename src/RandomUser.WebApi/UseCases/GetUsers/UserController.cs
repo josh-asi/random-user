@@ -8,7 +8,7 @@ using RandomUser.WebApi.Models;
 
 namespace RandomUser.WebApi.UseCases.GetUsers
 {
-    [Route("api/users")]
+    [Route("api/Users")]
     public class UserController : Controller
     {
         private readonly IUserQuery userQuery;
