@@ -22,17 +22,8 @@ namespace RandomUsers.WebApi.UseCases.GetUser
         {
             try
             {
-                var result = await userQuery.GetUserAsync(id);
-                var user = new UserDTO
-                {
-                    Id = id,
-                    Email = result.Email,
-                    DOB = result.DOB,
-                    Name = result.Name.FullName,
-                    Image = result.Image.DefaultLink,
-                    PhoneNumber = result.PhoneNumber
-                };
-                return new ObjectResult(user);                   
+                var user = await userQuery.GetUserAsync(id);
+                return new ObjectResult(UserMapper.Map(user));                   
             }
             catch (NotFoundException e)
             {
