@@ -9,6 +9,7 @@
     <Folder Include="Repository\" />
     <Folder Include="Queries\" />
     <Folder Include="Commands\DeleteUser\" />
+    <Folder Include="Commands\UpdateUser\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RandomUser.Domain\RandomUser.Domain.csproj" />

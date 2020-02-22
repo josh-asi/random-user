@@ -19,7 +19,7 @@ namespace RandomUser.Application.Commands.DeleteUser
         {
             var user = await userReadOnlyRepository.Get(userId);
             if (user == null) throw new NotFoundException("User not found");
-            await userWriteOnlyRepository.Delete(userId);
+            await userWriteOnlyRepository.DeleteAsync(userId);
         }
     }
 }
