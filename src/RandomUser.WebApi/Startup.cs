@@ -10,9 +10,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RandomUser.Application.Commands.DeleteUser;
 using RandomUser.Application.Queries;
+using RandomUser.Application.Repository;
 using RandomUser.Infrastructure.EntityFramework;
 using RandomUser.Infrastructure.EntityFramework.Queries;
+using RandomUser.Infrastructure.EntityFramework.Repositories;
 
 namespace RandomUsers.WebApi
 {
@@ -30,9 +33,15 @@ namespace RandomUsers.WebApi
         {
             services.AddControllers();
 
+            services.AddDbContext<Context>();
+
+            services.AddScoped<IUserWriteOnlyRepository, UserRepository>();
+            services.AddScoped<IUserReadOnlyRepository, UserRepository>();
+
             services.AddScoped<IUserQuery, UserQuery>();
 
-            services.AddDbContext<Context>();
+            services.AddScoped<IDeleteUserUseCase, DeleteUserUseCase>();
+
         }
             
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
