@@ -11,18 +11,8 @@ namespace RandomUser.Domain.User
             if (defaultLink.Length == 0) throw new ShouldNotBeEmptyException("Image link is empty!");
 
             DefaultLink = defaultLink;
-            Thumbnail = $"{defaultLink}--small";
+            Thumbnail = defaultLink.Replace(".jpg", "--small.jpg");
         }
-
-        //public override string ToString()
-        //{
-        //    return DefaultLink;
-        //}
-
-        //public static implicit operator string(Image image)
-        //{
-        //    return image.DefaultLink;
-        //}
-
+              
     }
 }
