@@ -1,5 +1,7 @@
 # Random User
 
+[![Build Status](https://travis-ci.com/josh-asi/random-user.svg?token=M4v3im2oWiwKUJqLzCYB&branch=master)](https://travis-ci.com/josh-asi/random-user)
+
 This project is meant to emulate the Api for [https://randomuser.me/](https://randomuser.me).
 
 Created by **Josh Asi**
@@ -21,7 +23,7 @@ Created by **Josh Asi**
 ## Requirements
 
 - Visual Studio
-- .NET Core 3.1.2
+- .NET Core 3.1.x
 
 ## Technologies
 
