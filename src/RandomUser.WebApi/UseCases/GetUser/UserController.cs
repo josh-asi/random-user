@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RandomUser.Application;
 using RandomUser.Application.Queries;
 using RandomUser.WebApi.Models;
+using System;
+using System.Threading.Tasks;
 
 namespace RandomUsers.WebApi.UseCases.GetUser
 {
@@ -23,7 +23,7 @@ namespace RandomUsers.WebApi.UseCases.GetUser
             try
             {
                 var user = await userQuery.GetUserAsync(id);
-                return new ObjectResult(UserMapper.Map(user));                   
+                return new ObjectResult(UserMapper.Map(user));
             }
             catch (NotFoundException e)
             {

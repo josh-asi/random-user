@@ -1,8 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RandomUser.Application;
 using RandomUser.Application.Commands.DeleteUser;
+using System;
+using System.Threading.Tasks;
 
 
 namespace RandomUser.WebApi.UseCases.DeleteUser
@@ -25,7 +25,7 @@ namespace RandomUser.WebApi.UseCases.DeleteUser
                 await deleteUserService.Execute(userId);
                 return Ok();
             }
-            catch(NotFoundException e)
+            catch (NotFoundException e)
             {
                 return NotFound(e.Message);
             }

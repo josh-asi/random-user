@@ -1,7 +1,4 @@
-﻿using System;
-using RandomUser.Domain.User.ValueObjects;
-
-namespace RandomUser.Domain.User
+﻿namespace RandomUser.Domain.User
 {
     public sealed class Name
     {

@@ -1,11 +1,11 @@
-using System;
-using System.Linq;
+﻿using NSubstitute;
 using RandomUser.Application.Queries;
-using Xunit;
-using NSubstitute;
 using RandomUser.Domain.User;
 using RandomUser.Domain.User.ValueObjects;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using Xunit;
 
 namespace RandomUser.Application.Tests
 {
@@ -25,7 +25,7 @@ namespace RandomUser.Application.Tests
         public async void User_Should_Be_Grabbed_By_Id()
         {
             var id = 1;
-            var name = new Name("Mr" ,"John", "Doe");
+            var name = new Name("Mr", "John", "Doe");
             var dob = DateTime.Now;
             var phone = new PhoneNumber(1234567);
             var email = new Email("john.doe@email.com");

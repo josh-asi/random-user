@@ -9,5 +9,5 @@ namespace RandomUser.WebApi.Models
         public DateTime DOB { get; set; }
         public int PhoneNumber { get; set; }
         public string Image { get; set; }
-     }
+    }
 }

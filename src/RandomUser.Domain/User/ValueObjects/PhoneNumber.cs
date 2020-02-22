@@ -1,5 +1,4 @@
-﻿using System;
-using RandomUser.Domain.User.ValueObjects.Exceptions;
+﻿using RandomUser.Domain.User.ValueObjects.Exceptions;
 
 namespace RandomUser.Domain.User.ValueObjects
 {

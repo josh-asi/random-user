@@ -1,5 +1,4 @@
-﻿using System;
-namespace RandomUser.Infrastructure.DataSeeding
+﻿namespace RandomUser.Infrastructure.DataSeeding
 {
     public class MaleNames
     {
@@ -41,23 +40,22 @@ namespace RandomUser.Infrastructure.DataSeeding
             "Gustave", "Orville", "Lorenzo", "Bruce", "Marcus", "Preston", "Bob", "Dock",
             "Donald", "Jackson", "Cecil", "Barney", "Delbert", "Edmond", "Anderson",
             "Christian", "Glenn", "Jefferson", "Luke", "Neal", "Burt", "Ike", "Myron",
-            "Tony", "Conrad", "Joel", "Matt", "Riley", "Vincent", "Emory", "Isaiah", 
-            "Nick", "Ezra", "Green", "Juan", "Clifton", "Lucius", "Porter", "Arnold", 
+            "Tony", "Conrad", "Joel", "Matt", "Riley", "Vincent", "Emory", "Isaiah",
+            "Nick", "Ezra", "Green", "Juan", "Clifton", "Lucius", "Porter", "Arnold",
             "Bud", "Jeremiah", "Taylor", "Forrest", "Roland", "Spencer", "Burton", "Don",
-             "Emmet", "Gustav", "Louie", "Morgan", "Ned", "Van", "Ambrose", "Chauncey", 
+             "Emmet", "Gustav", "Louie", "Morgan", "Ned", "Van", "Ambrose", "Chauncey",
              "Elisha", "Ferdinand", "General", "Julian", "Kenneth", "Mitchell", "Allie",
-              "Josh", "Judson", "Lyman", "Napoleon", "Pedro", "Berry", "Dewitt", "Ervin", 
+              "Josh", "Judson", "Lyman", "Napoleon", "Pedro", "Berry", "Dewitt", "Ervin",
               "Forest", "Lynn", "Pink", "Ruben", "Sanford", "Ward", "Douglas", "Ole", "Omer",
-               "Ulysses", "Walker", "Wilbert", "Adelbert", "Benjiman", "Ivan", "Jonas", "Major", 
-               "Abner", "Archibald", "Caleb", "Clint", "Dudley", "Granville", "King", "Mary", 
+               "Ulysses", "Walker", "Wilbert", "Adelbert", "Benjiman", "Ivan", "Jonas", "Major",
+               "Abner", "Archibald", "Caleb", "Clint", "Dudley", "Granville", "King", "Mary",
                "Merton", "Antonio", "Bennie", "Carroll", "Freeman", "Josiah", "Milo", "Royal", "Dick",
                 "Earle", "Elza", "Emerson", "Fletcher", "Judge", "Laurence", "Neil", "Roger", "Seth",
                  "Glen", "Hugo", "Jimmie", "Johnnie", "Washington", "Elwood", "Gust", "Harmon", "Jordan",
-                  "Simeon", "Wayne", "Wilber", "Clem", "Evan", "Frederic", "Irwin", "Junius", "Lafayette", 
-                  "Loren", "Madison", "Mason", "Orval", "Abram", "Aubrey", "Elliott", "Hans", "Karl", "Minor", 
+                  "Simeon", "Wayne", "Wilber", "Clem", "Evan", "Frederic", "Irwin", "Junius", "Lafayette",
+                  "Loren", "Madison", "Mason", "Orval", "Abram", "Aubrey", "Elliott", "Hans", "Karl", "Minor",
                   "Wash", "Wilfred", "Allan", "Alphonse", "Dallas", "Dee", "Isiah", "Jason", "Johnny", "Lawson",
-                   "Lew", "Micheal", "Orin", "Addison", "Cal", "Erastus", "Francisco", "Hardy", "Lucien", 
+                   "Lew", "Micheal", "Orin", "Addison", "Cal", "Erastus", "Francisco", "Hardy", "Lucien",
                    "Randolph", "Stewart", "Vern", "Wilmer", "Zack" };
-        }
+    }
 }
-

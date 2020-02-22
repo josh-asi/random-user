@@ -1,12 +1,12 @@
-﻿using System;
-using System.Threading.Tasks;
-using RandomUser.Application.Repository;
+﻿using RandomUser.Application.Repository;
 using RandomUser.Domain.User;
 using RandomUser.Domain.User.ValueObjects;
+using System;
+using System.Threading.Tasks;
 
 namespace RandomUser.Infrastructure.EntityFramework.Repositories
 {
-    public class UserRepository : IUserWriteOnlyRepository, IUserReadOnlyRepository 
+    public class UserRepository : IUserWriteOnlyRepository, IUserReadOnlyRepository
     {
         private Context context;
 
