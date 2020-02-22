@@ -7,6 +7,7 @@ using RandomUser.Application.Queries;
 using RandomUser.Domain.User;
 using RandomUser.Domain.User.ValueObjects;
 using Microsoft.EntityFrameworkCore;
+using RandomUser.Application;
 
 namespace RandomUser.Infrastructure.EntityFramework.Queries
 {

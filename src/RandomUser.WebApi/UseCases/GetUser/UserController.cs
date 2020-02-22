@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RandomUser.Application;
 using RandomUser.Application.Queries;
-using RandomUser.Infrastructure.EntityFramework;
 using RandomUser.WebApi.Models;
 
 namespace RandomUsers.WebApi.UseCases.GetUser
@@ -35,10 +33,12 @@ namespace RandomUsers.WebApi.UseCases.GetUser
                     PhoneNumber = result.PhoneNumber
                 };
                 return new ObjectResult(user);                   
-            } catch (NotFoundException e)
+            }
+            catch (NotFoundException e)
             {
                 return NotFound(e.Message);
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return BadRequest($"Error: {e.Message}");
             }

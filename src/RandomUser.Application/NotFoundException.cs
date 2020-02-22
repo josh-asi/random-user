@@ -1,5 +1,5 @@
 ﻿using System;
-namespace RandomUser.Infrastructure.EntityFramework
+namespace RandomUser.Application
 {
     public class NotFoundException : Exception
     {

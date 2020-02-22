@@ -8,6 +8,7 @@
     <Folder Include="Commands\" />
     <Folder Include="Repository\" />
     <Folder Include="Queries\" />
+    <Folder Include="Commands\DeleteUser\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RandomUser.Domain\RandomUser.Domain.csproj" />
