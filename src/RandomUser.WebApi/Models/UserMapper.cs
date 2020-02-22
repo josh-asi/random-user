@@ -1,0 +1,22 @@
+﻿using System.Linq;
+using System.Collections.Generic;
+using RandomUser.Domain.User;
+
+namespace RandomUser.WebApi.Models
+{
+    public class UserMapper
+    {
+        public static List<UserDTO> Map(List<User> users)
+        {
+            return users.Select(user => new UserDTO
+            {
+                Id = user.Id,
+                Name = user.Name.FullName,
+                DOB = user.DOB,
+                Email = user.Email,
+                Image = user.Image.Thumbnail,
+                PhoneNumber = user.PhoneNumber
+            }).ToList();
+        }
+    }
+}

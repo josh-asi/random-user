@@ -8,8 +8,8 @@ namespace RandomUser.Domain.Tests
        public void Image_Should_Have_A_Default_And_Thumbnail()
         {
 
-            string defaultLink = "testing";
-            string thumbnail = $"{defaultLink}--small";
+            string defaultLink = "testing.jpg";
+            string thumbnail = "testing--small.jpg";
 
             Image image = new Image(defaultLink);
 
