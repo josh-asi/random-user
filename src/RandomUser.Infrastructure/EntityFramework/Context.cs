@@ -13,7 +13,7 @@ namespace RandomUser.Infrastructure.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Specify the path of the database here
-            optionsBuilder.UseSqlite("Filename=../users.sqlite");
+            optionsBuilder.UseSqlite("Filename=../RandomUser.Infrastructure/users.sqlite");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
