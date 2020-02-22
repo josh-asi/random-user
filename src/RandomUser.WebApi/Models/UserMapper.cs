@@ -18,5 +18,18 @@ namespace RandomUser.WebApi.Models
                 PhoneNumber = user.PhoneNumber
             }).ToList();
         }
+
+        public static UserDTO Map(User user)
+        {
+            return new UserDTO
+            {
+                Id = user.Id,
+                Name = user.Name.FullName,
+                DOB = user.DOB,
+                Email = user.Email,
+                Image = user.Image.DefaultLink,
+                PhoneNumber = user.PhoneNumber
+            };
+        }
     }
 }

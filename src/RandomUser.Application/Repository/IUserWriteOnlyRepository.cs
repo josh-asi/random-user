@@ -1,9 +1,11 @@
 ﻿using System.Threading.Tasks;
+using RandomUser.Domain.User;
 
 namespace RandomUser.Application.Repository
 {
     public interface IUserWriteOnlyRepository
     {
-        Task Delete(int userId);
+        Task DeleteAsync(int userId);
+        Task UpdateAsync(User user);
     }
 }

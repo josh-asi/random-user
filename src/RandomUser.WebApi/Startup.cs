@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RandomUser.Application.Commands.DeleteUser;
+using RandomUser.Application.Commands.UpdateUser;
 using RandomUser.Application.Queries;
 using RandomUser.Application.Repository;
 using RandomUser.Infrastructure.EntityFramework;
@@ -40,6 +41,7 @@ namespace RandomUsers.WebApi
 
             services.AddScoped<IUserQuery, UserQuery>();
 
+            services.AddScoped<IUpdateUserUseCase, UpdateUserUseCase>();
             services.AddScoped<IDeleteUserUseCase, DeleteUserUseCase>();
 
         }
