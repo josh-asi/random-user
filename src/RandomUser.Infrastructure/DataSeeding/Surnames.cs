@@ -1,5 +1,4 @@
-﻿using System;
-namespace RandomUser.Infrastructure.DataSeeding
+﻿namespace RandomUser.Infrastructure.DataSeeding
 {
     public class Surnames
     {

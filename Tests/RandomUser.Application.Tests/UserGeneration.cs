@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using RandomUser.Domain.User;
+﻿using RandomUser.Domain.User;
 using RandomUser.Domain.User.ValueObjects;
+using System;
+using System.Collections.Generic;
 
 namespace RandomUser.Application.Tests
 {

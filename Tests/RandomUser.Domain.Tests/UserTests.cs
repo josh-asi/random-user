@@ -1,8 +1,8 @@
-using System;
-using Xunit;
-using RandomUser.Domain.User;
+﻿using RandomUser.Domain.User;
 using RandomUser.Domain.User.ValueObjects;
 using RandomUser.Domain.User.ValueObjects.Exceptions;
+using System;
+using Xunit;
 
 namespace RandomUser.Domain.Tests
 {
@@ -21,7 +21,7 @@ namespace RandomUser.Domain.Tests
             var user = new User.User(id, name, dob, phoneNo, email, image);
 
             Assert.NotNull(user);
-           
+
         }
 
         [Fact]

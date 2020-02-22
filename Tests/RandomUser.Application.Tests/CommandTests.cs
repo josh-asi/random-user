@@ -1,13 +1,10 @@
-﻿using System;
-using System.Linq;
-using RandomUser.Application.Queries;
-using Xunit;
-using NSubstitute;
+﻿using NSubstitute;
+using RandomUser.Application.Commands.UpdateUser;
+using RandomUser.Application.Repository;
 using RandomUser.Domain.User;
 using RandomUser.Domain.User.ValueObjects;
 using System.Collections.Generic;
-using RandomUser.Application.Repository;
-using RandomUser.Application.Commands.UpdateUser;
+using Xunit;
 
 namespace RandomUser.Application.Tests
 {

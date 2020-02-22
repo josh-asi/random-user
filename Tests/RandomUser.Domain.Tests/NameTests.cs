@@ -1,6 +1,6 @@
-﻿using Xunit;
-using RandomUser.Domain.User;
+﻿using RandomUser.Domain.User;
 using RandomUser.Domain.User.ValueObjects;
+using Xunit;
 
 namespace RandomUser.Domain.Tests
 {

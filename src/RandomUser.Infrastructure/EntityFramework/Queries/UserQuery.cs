@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Linq;
-
+﻿using Microsoft.EntityFrameworkCore;
+using RandomUser.Application;
 using RandomUser.Application.Queries;
 using RandomUser.Domain.User;
 using RandomUser.Domain.User.ValueObjects;
-using Microsoft.EntityFrameworkCore;
-using RandomUser.Application;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace RandomUser.Infrastructure.EntityFramework.Queries
 {
@@ -71,8 +70,8 @@ namespace RandomUser.Infrastructure.EntityFramework.Queries
         private List<User> mapUsers(List<Entities.User> dbUsers)
         {
             var users = new List<User>();
-                       
-            foreach(Entities.User user in dbUsers)
+
+            foreach (Entities.User user in dbUsers)
             {
                 users.Add(new User(
                     user.Id,
@@ -83,7 +82,7 @@ namespace RandomUser.Infrastructure.EntityFramework.Queries
                     new Image(user.Image))
                     );
             }
-            
+
             return users;
         }
 

@@ -1,14 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using RandomUser.Infrastructure.EntityFramework;
+using System;
 
 namespace RandomUsers.WebApi
 {
@@ -27,7 +21,7 @@ namespace RandomUsers.WebApi
                     var context = services.GetRequiredService<Context>();
                     context.Database.EnsureDeleted();
                     context.Database.EnsureCreated();
-                    
+
                 }
                 catch (Exception ex)
                 {
