@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RandomUser.Application;
 using RandomUser.Application.Queries;
-using RandomUser.Infrastructure.EntityFramework;
 using RandomUser.WebApi.Models;
 
 
