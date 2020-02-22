@@ -1,0 +1,21 @@
+{
+  "profiles": {
+    "RandomUser.WebApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    },
+    "RandomUsers.WebApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/user",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    }
+  }
+}

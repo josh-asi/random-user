@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="EntityFramework\" />
+    <Folder Include="EntityFramework\Queries\" />
+    <Folder Include="EntityFramework\Entities\" />
+    <Folder Include="DataSeeding\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="EntityFramework\Users.sqlite" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RandomUser.Application\RandomUser.Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
