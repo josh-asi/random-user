@@ -77,7 +77,8 @@ namespace RandomUser.Infrastructure.EntityFramework.Queries
 
                 var newUser = new User(
                     user.Id,
-                    name, user.DOB,
+                    name,
+                    user.DOB,
                     new PhoneNumber(user.PhoneNumber),
                     new Email(user.Email),
                     new Image(user.Image));

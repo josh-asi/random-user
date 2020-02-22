@@ -26,7 +26,7 @@ namespace RandomUsers.WebApi
                 {
                     var context = services.GetRequiredService<Context>();
                     context.Database.EnsureDeleted();
-                    context.Database.Migrate(); 
+                    context.Database.EnsureCreated();
                     
                 }
                 catch (Exception ex)
