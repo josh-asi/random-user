@@ -17,6 +17,7 @@ using RandomUser.Application.Repository;
 using RandomUser.Infrastructure.EntityFramework;
 using RandomUser.Infrastructure.EntityFramework.Queries;
 using RandomUser.Infrastructure.EntityFramework.Repositories;
+using Microsoft.OpenApi.Models;
 
 namespace RandomUsers.WebApi
 {
@@ -34,11 +35,18 @@ namespace RandomUsers.WebApi
         {
             services.AddControllers();
 
+            // Swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "User API", Version = "v1" });
+            });
+
+
+            // EF Context
             services.AddDbContext<Context>();
 
             services.AddScoped<IUserWriteOnlyRepository, UserRepository>();
             services.AddScoped<IUserReadOnlyRepository, UserRepository>();
-
             services.AddScoped<IUserQuery, UserQuery>();
 
             services.AddScoped<IUpdateUserUseCase, UpdateUserUseCase>();
@@ -59,6 +67,13 @@ namespace RandomUsers.WebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "User API V1");
+            });
 
             app.UseEndpoints(endpoints =>
             {
