@@ -51,6 +51,21 @@ namespace RandomUser.Application.Tests
             Assert.Equal(users, userList);
         }
 
+        [Theory]
+        [InlineData(1)]
+        [InlineData(6)]
+        public async void Users_Should_Be_Limited_By_A_Number(int limit)
+        {
+            var limitedUsers = users.Take(limit).ToList();
+
+            userQuery.GetUsersAsync(limit).Returns(limitedUsers);
+
+            var result = await userQuery.GetUsersAsync(limit);
+
+            Assert.Equal(limitedUsers.Count, result.Count);
+            Assert.Equal(limitedUsers, result);
+        }
+
 
         [Theory]
         [InlineData("John")]
