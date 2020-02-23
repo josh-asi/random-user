@@ -21,7 +21,7 @@ Created by **Josh Asi**
 ## Requirements
 
 - Visual Studio
-- .NET Core 3.1.2
+- .NET Core 3.1.x
 
 ## Technologies
 
